@@ -1,0 +1,84 @@
+:root{
+  --bg: #0b0d10;
+  --card: #151a20;
+  --surface: #0f1318;       /* chips, small surfaces */
+  --text: #e8eef5;
+  --muted: #a5b2c2;
+  --brand: #6bc2ff;
+  --brand-2: #8c7bff;
+  --border: rgba(255,255,255,.10);
+  --ring: 0 0 0 2px rgba(107,194,255,.35), 0 10px 30px rgba(107,194,255,.15);
+}
+*{box-sizing: border-box}
+html,body{height:100%}
+body{
+  margin:0; background: radial-gradient(1200px 600px at 80% -10%, color-mix(in lab, var(--brand-2) 25%, transparent), transparent 60%),
+                      radial-gradient(900px 500px at -10% 0%, color-mix(in lab, var(--brand) 20%, transparent), transparent 60%), var(--bg);
+  color:var(--text); font: 16px/1.6 Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  letter-spacing:.2px;
+}
+a{color:var(--brand); text-decoration:none}
+.container{max-width:1100px; margin:0 auto; padding:24px}
+header{
+  position: sticky; top:0; z-index: 10; backdrop-filter: blur(8px);
+  background: linear-gradient(180deg, color-mix(in lab, var(--bg) 85%, transparent), color-mix(in lab, var(--bg) 65%, transparent));
+  border-bottom: 1px solid var(--border);
+}
+.nav{display:flex; align-items:center; gap:18px; justify-content:space-between}
+.brand{display:flex; align-items:center; gap:14px}
+.avatar{width:64px; height:64px; border-radius:18px; object-fit:cover; border:1px solid var(--border); box-shadow: var(--ring)}
+.title{font: 700 26px/1 'Playfair Display', serif; letter-spacing:.3px}
+.tag{font-size:14px; color:var(--muted)}
+.cta{display:flex; gap:10px; align-items:center}
+.btn{appearance:none; border:none; cursor:pointer; padding:10px 14px; border-radius:12px; font-weight:600}
+.btn-primary{background:linear-gradient(135deg, var(--brand), var(--brand-2)); color:#081018; box-shadow: var(--ring)}
+.btn-outline{background:transparent; color:var(--text); border:1px solid var(--border)}
+.theme{width:44px; height:38px; display:inline-grid; place-items:center; border-radius:12px; background:var(--surface); border:1px solid var(--border)}
+
+/* Hero */
+.hero{display:grid; grid-template-columns: 1.2fr .8fr; gap:36px; align-items:center; padding:34px 0}
+.hero h1{margin:6px 0 8px; font: 700 44px/1.1 'Playfair Display', serif}
+.hero p{margin:0; color:var(--muted)}
+.hero .card{background:var(--card); border:1px solid var(--border); border-radius:20px; padding:18px; display:grid; gap:10px}
+.kv{width:100%; border-radius:20px; border:1px solid var(--border); object-fit:cover}
+
+/* Grid */
+.grid{display:grid; grid-template-columns: repeat(12, 1fr); gap:18px}
+.card{background:var(--card); border:1px solid var(--border); border-radius:18px; padding:18px}
+.h2{font:700 22px/1.2 Inter, system-ui; margin:0 0 10px}
+.muted{color:var(--muted)}
+
+/* Secciones */
+section{margin:28px 0}
+
+/* Contacto */
+.contact-list{display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap:12px}
+.contact-item{display:flex; gap:12px; align-items:flex-start}
+.contact-item b{display:block}
+
+/* Timeline */
+.timeline{display:grid; gap:12px}
+.titem{display:grid; grid-template-columns: 1fr auto; gap:6px; padding:14px; background:var(--surface); border:1px solid var(--border); border-radius:14px}
+.titem small{color:var(--muted)}
+
+/* Skills */
+.skills{display:flex; flex-wrap:wrap; gap:10px}
+.chip{padding:8px 12px; border:1px solid var(--border); border-radius:999px; background:var(--surface)}
+
+/* Proyectos */
+.projects{display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap:18px}
+.project{display:grid; gap:8px}
+.project .thumb{aspect-ratio: 16/9; background: linear-gradient(135deg, color-mix(in lab, var(--brand) 25%, transparent), color-mix(in lab, var(--brand-2) 25%, transparent)); border:1px solid var(--border); border-radius:12px}
+.project h3{margin:0; font-size:18px}
+.badges{display:flex; gap:8px; flex-wrap:wrap}
+.badge{padding:4px 10px; border-radius:999px; font-size:12px; background:var(--surface); border:1px solid var(--border)}
+
+.callout{display:flex; align-items:center; justify-content:space-between; gap:18px}
+
+footer{margin:40px 0 20px; color:var(--muted); text-align:center}
+
+@media (max-width: 900px){
+  .hero{grid-template-columns: 1fr;}
+  .projects{grid-template-columns: 1fr;}
+  .contact-list{grid-template-columns: 1fr}
+}

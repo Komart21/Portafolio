@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mario Pes Serradilla — Portafolio</title>
+  <meta name="description" content="Portafolio de Mario Pes Serradilla. Desarrollo multiplataforma, frontend y videojuegos." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <img class="avatar" src="foto-mario.PNG" alt="Foto de Mario Pes Serradilla" />
+        <div>
+          <div class="title">Mario Pes Serradilla</div>
+          <div class="tag">Desarrollo de Aplicaciones Multiplataforma · Frontend · Videojuegos</div>
+        </div>
+      </div>
+      <div class="cta">
+        <button class="btn btn-primary" id="goContact">Contactar</button>
+        <button class="theme" id="themeBtn" title="Cambiar tema">🌓</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="card">
+        <h1>En búsqueda de una nueva oportunidad</h1>
+        <p>Quiero crecer en el sector de Desarrollo de Aplicaciones Multiplataforma y también en el desarrollo web. Me apasiona el frontend y la creación de videojuegos.</p>
+        <div style="display:flex; gap:12px; margin-top:14px">
+          <button class="btn btn-primary" id="goProjects">Ver proyectos</button>
+          <button class="btn btn-outline" id="goProcess">Sobre mí</button>
+        </div>
+      </div>
+      <img class="kv" src="foto-mario.PNG" alt="Retrato de Mario" />
+    </section>
+
+    <!-- Sobre mí -->
+    <section id="proceso">
+      <div class="card">
+        <h2 class="h2">Sobre mí</h2>
+        <p class="muted">
+          Me gusta crear interfaces atractivas y funcionales, trabajar con el <strong>frontend</strong> y experimentar con tecnologías que hagan la experiencia de usuario más fluida.
+        </p>
+        <p class="muted">
+          También me apasiona el <strong>desarrollo de videojuegos</strong>, donde puedo combinar creatividad y programación.
+        </p>
+        <p class="muted">
+          Mi plan a futuro es seguir creciendo como desarrollador en el ámbito <strong>multiplataforma</strong> y <strong>web</strong>, aportando en proyectos que me reten y me permitan aprender constantemente.
+        </p>
+      </div>
+    </section>
+
+    <!-- Proyectos -->
+    <section id="proyectos">
+      <div class="card">
+        <h2 class="h2">Proyectos</h2>
+        <div class="projects">
+          <article class="project">
+            <div class="thumb"></div>
+            <h3>Gestor de Incidencias</h3>
+            <p class="muted">Aplicación sencilla para registrar y dar seguimiento a incidencias de TI.</p>
+            <div class="badges">
+              <span class="badge">Java</span><span class="badge">SQLite</span><span class="badge">Swing</span>
+            </div>
+          </article>
+          <article class="project">
+            <div class="thumb"></div>
+            <h3>Dashboard de Inventario</h3>
+            <p class="muted">Control de activos con búsqueda y exportación.</p>
+            <div class="badges">
+              <span class="badge">HTML/CSS</span><span class="badge">JavaScript</span>
+            </div>
+          </article>
+          <article class="project">
+            <div class="thumb"></div>
+            <h3>Mini Videojuego</h3>
+            <p class="muted">Proyecto personal de videojuego 2D simple.</p>
+            <div class="badges">
+              <span class="badge">Unity</span><span class="badge">C#</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="grid">
+      <div class="card" style="grid-column: span 12">
+        <h2 class="h2">Contacto</h2>
+        <div class="contact-list">
+          <div class="contact-item"><div>📧</div><div><b>Email</b><span>mariofnt8@gmail.com</span></div></div>
+          <div class="contact-item"><div>📱</div><div><b>Teléfono</b><span>+34 672 798 541</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Llamada -->
+    <section>
+      <div class="card callout">
+        <div>
+          <h2 class="h2">¿Hablamos?</h2>
+          <p class="muted">Respondo rápido por email o teléfono. Estoy abierto a nuevas oportunidades.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Mario Pes Serradilla · Portafolio
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
